@@ -10,6 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       "GitHub": "https://github.com/adeshkadambi/",
       "LinkedIn": "https://www.linkedin.com/in/akadambi/",
+      "Google Scholar": "https://scholar.google.com/citations?hl=en&user=y6O3yK0AAAAJ",
       "Email": "mailto:adeshkadambi@gmail.com",
     },
   }),
