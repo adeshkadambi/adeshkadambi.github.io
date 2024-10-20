@@ -1,14 +1,17 @@
 ---
-title: my resume
+title: my resume.
 draft: false
 ---
-### my education
 
-**Ph.D. in Biomedical Engineering** / University of Toronto (*2020 - Present*)
+# my education.
 
-**B.Eng. in Biomedical Engineering, Co-Op** / University of Guelph (*2015 - 2020*)
+> **Ph.D. in Biomedical Engineering** / University of Toronto\
+> *September 2020 - August 2025 (Expected)*
 
-### my work
+> **B.Eng. in Biomedical Engineering, Co-Op** / University of Guelph\
+> *September 2015 - June 2020* 
+
+# my work.
 
 > **Data Scientist** / Delfina Care Inc.\
 > *July 2021 - Present • Remote*
@@ -40,7 +43,7 @@ draft: false
 ---
 > **Software Engineer Intern** / Digital Kitchener Innovation Lab\
 > *September 2019 - December 2019 • Kitchener, ON*
-- Developed an internal reporting dashboard in Angular to monitor streaming IoT data in AWS from soil sensors across the city to assess soil quality. 
+- Developed a reporting dashboard in Angular that integrated IoT sensor data from AWS to enable real-time soil quality management across the city and support data-driven decision-making for urban planning initiatives.
 \
 \
 **Technologies**: `TypeScript`, `Angular`, `GraphQL`, `AWS`, `Git`
