@@ -1,7 +1,8 @@
 ---
-title: utoronto thesis template
+title: UofT Thesis Template
 draft: 
-tags:
+tags: 
+date: 2024-10-20
 ---
 
 ![[public/ut-thesis-banner.png]]

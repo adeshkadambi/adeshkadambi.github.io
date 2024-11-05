@@ -1,9 +1,8 @@
 ---
-title: my resume.
+title: Resume
 draft: false
 ---
-
-# my education.
+## Education
 
 > **Ph.D. in Biomedical Engineering** / University of Toronto\
 > *September 2020 - August 2025 (Expected)*
@@ -11,7 +10,8 @@ draft: false
 > **B.Eng. in Biomedical Engineering, Co-Op** / University of Guelph\
 > *September 2015 - June 2020* 
 
-# my work.
+---
+## Experience
 
 > **Data Scientist** / Delfina Care Inc.\
 > *July 2021 - Present • Remote*
@@ -20,7 +20,6 @@ draft: false
 \
 **Technologies**: `SQL`, `Python`, `Docker`, `Dagster`, `GCP`, `Git`
 
----
 
 > **Doctoral Researcher** / KITE Research Institute\
 > *September 2020 - Present • Toronto, ON*
@@ -30,7 +29,6 @@ draft: false
 \
 **Technologies**: `Python`, `JavaScript`, `React`, `Firebase`, `Git`
 
----
 
 > **Chief Design Officer** / Hikma Health\
 > *April 2018 - June 2021 • Remote*
@@ -40,7 +38,7 @@ draft: false
 \
 **Technologies**: `Figma`
 
----
+
 > **Software Engineer Intern** / Digital Kitchener Innovation Lab\
 > *September 2019 - December 2019 • Kitchener, ON*
 - Developed a reporting dashboard in Angular that integrated IoT sensor data from AWS to enable real-time soil quality management across the city and support data-driven decision-making for urban planning initiatives.
@@ -48,7 +46,7 @@ draft: false
 \
 **Technologies**: `TypeScript`, `Angular`, `GraphQL`, `AWS`, `Git`
 
----
+
 > **Software Engineer Intern, Machine Learning** / Publicis Sapient\
 > *June 2019 - August 2019 • Toronto, ON*
 - Developed the API for and deployed a machine learning microservice to identify errors in streaming financial trade reporting to Kubernetes, reducing processing time by 99.6% per request at scale.
@@ -56,7 +54,7 @@ draft: false
 \
 **Technologies**: `Python`, `Flask`, `JavaScript`, `GCP`, `Git`
 
----
+
 > **Research Associate** / Massachusetts General Hospital\
 > *January 2018 - August 2018 • Boston, MA*
 - Explored machine learning paradigms for seizure detection and prediction in a rodent model of focal epilepsy.

@@ -1,5 +1,6 @@
 ---
-title: hey there 👋 my name is adesh.
+title: Hey there 👋 my name is Adesh.
+date: 2024-09-01
 ---
 > 📍 Toronto, Canada
 
