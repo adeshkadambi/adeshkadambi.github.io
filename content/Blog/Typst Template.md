@@ -1,10 +1,9 @@
 ---
-title: UofT Thesis Template
+title: UofT Typst Thesis Template
 draft: 
 tags: 
 date: 2024-10-20
 ---
-
 ![[ut-thesis-banner.png]]
 I recently discovered Typst, ["a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use"](https://github.com/typst/typst), a few months ago and I've been absolutely loving it. The faster compilation and simpler syntax meant that things are more intuitive and I could be more productive at the same time. Here's a quick example...
 
