@@ -30,10 +30,19 @@ draft: false
 **Technologies**: `Python`, `JavaScript`, `React`, `Firebase`, `Git`
 
 
+> **Co-founder and CTO** / Maya Health\
+> *November 2023 - February 2024 • Remote*
+- Worked with [Shivam](https://www.linkedin.com/in/sdubey97/) to bring automated medical coding to mid-size clinics in the US. Had some traction with investors but ultimately ended up abandoning this idea due to a combination of what we heard from potential users and our other time commitments. You can read a blog post we wrote about our learnings here: [[Maya Post Mortem]]!
+\
+\
+**Technologies**: `Figma`, `Python`, `LLMs` 
+
+
 > **Chief Design Officer** / Hikma Health\
-> *April 2018 - June 2021 • Remote*
-- Led product design for an EHR system deployed in 5+ countries and serving 100K+ patients. Read more about our design process [here](https://doi.org/10.3389/fdgth.2022.847002).
+> *April 2018 - June 2022 • Remote*
+- Led product design for an EHR system deployed in 5+ countries and serving 100K+ patients.
 - Managed 3 designers through UX research, design system implementation, and UI design processes.
+- We published our design process and learnings [here](https://doi.org/10.3389/fdgth.2022.847002).
 \
 \
 **Technologies**: `Figma`
