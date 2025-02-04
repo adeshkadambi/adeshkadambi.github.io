@@ -68,7 +68,9 @@ Wants=network-online.target
 Type=simple 
 ExecStart=/usr/bin/rclone mount proton: /home/YOUR_USERNAME/ProtonDrive --vfs-cache-mode writes 
 Restart=on-failure 
-User=YOUR_USERNAME [Install] 
+User=YOUR_USERNAME 
+
+[Install] 
 WantedBy=multi-user.target
 ```
 
