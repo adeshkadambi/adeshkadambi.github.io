@@ -2,6 +2,7 @@
 title: Resume
 draft: false
 ---
+**Download a copy of my resume [here](https://drive.proton.me/urls/R98PH7B9XG#VVxZ1A0xcWc8).**
 ## Education
 
 > **Ph.D. in Biomedical Engineering** / University of Toronto\
