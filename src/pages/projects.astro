@@ -5,7 +5,13 @@ import Base from "../layouts/Base.astro"
 // Most recent first, by the last year mentioned (e.g. "2020–2025" sorts as 2025)
 const lastYear = (year?: string) => Math.max(0, ...(year?.match(/\d{4}/g) ?? []).map(Number))
 const projects = (await getCollection("projects")).sort((a, b) => lastYear(b.data.year) - lastYear(a.data.year))
-const linkLabels = { site: "Website", repo: "Code", paper: "Paper", post: "Write-up" } as const
+const publications = new Map((await getCollection("publications")).map((p) => [p.id, p.data]))
+// Oldest first; same-year papers keep the order they're listed in projects.yaml
+const papersByDate = (refs: { id: string }[]) =>
+  refs
+    .map(({ id }) => ({ id, ...publications.get(id)! }))
+    .sort((a, b) => a.year - b.year)
+const linkLabels = { site: "Website", repo: "Code", thesis: "Thesis", paper: "Paper", post: "Write-up" } as const
 ---
 
 <Base title="Projects" description="Things Adesh Kadambi has built.">
@@ -23,6 +29,9 @@ const linkLabels = { site: "Website", repo: "Code", paper: "Paper", post: "Write
             {(Object.keys(linkLabels) as (keyof typeof linkLabels)[]).map(
               (key) => data.links[key] && <a href={data.links[key]}>{linkLabels[key]}</a>,
             )}
+            {papersByDate(data.papers).map(({ id, url }, i) => (
+              <a href={url ?? `/publications/#${id}`}>Paper {i + 1}</a>
+            ))}
           </div>
         </li>
       ))

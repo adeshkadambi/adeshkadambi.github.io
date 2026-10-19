@@ -13,7 +13,9 @@ npm run check    # type + content schema checks
 
 Everything in the feed (and `/rss.xml`) lives in `src/content/posts/` as `YYYY-MM-DD-slug.md`.
 
-**Post**: a long-form article. Shows as title + description in the feed.
+Every entry shows as its title + `description` in the feed and links to its own page.
+
+**Post**: a long-form article.
 
 ```md
 ---
@@ -27,13 +29,14 @@ draft: true          # optional, hidden in production
 Body…
 ```
 
-**Update**: a short note (paper accepted, grant, talk). The whole body shows inline in the feed.
+**Update**: a short note (paper accepted, grant, talk). Gets an "Update" label in the feed.
 
 ```md
 ---
 title: "Paper accepted at ACRM RehabWeek 2025"
 date: 2025-05-01
 kind: update
+description: "One line for the feed."
 ---
 
 One or two sentences with a [link](https://…).

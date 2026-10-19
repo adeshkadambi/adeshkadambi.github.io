@@ -4,19 +4,30 @@ import FeedItem from "../components/FeedItem.astro"
 import { site } from "../data/site"
 import { getPosts } from "../lib/posts"
 
-const posts = (await getPosts()).slice(0, 10)
+const posts = (await getPosts()).slice(0, 5)
 ---
 
 <Base>
   <section class="intro prose">
     <h1>Hi, I'm Adesh.</h1>
     <p>
-      I build machine learning and data tools for healthcare. I'm a Ph.D. candidate at the University of Toronto in the{" "}
-      <a href="https://www.neurorehab-systems.ca/">Adaptive Neurorehabilitation Systems Lab</a>, where I use AI and
-      wearable cameras to support clinical decision-making in outpatient neurorehabilitation. I'm also a data scientist
-      at <a href="https://www.delfina.com/">Delfina Care</a>, where I work on improving outcomes for mothers and babies.
+      I'm a senior research engineer at <a href="https://www.delfina.com/">Delfina Care</a>, where I build AI agents to
+      improve pregnancy care and the decisions made around it. Most of my work is on alignment and evaluation: the
+      harnesses, LLM-as-a-judge systems, and other tooling that tell us whether an agent is actually doing what we think
+      it's doing.
     </p>
-    <p>Toronto, Canada. The best way to reach me is <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+    <p>
+      I'm optimistic about what AI can do in healthcare, especially for clinicians who are stretched thin and burnt out.
+      I'm also worried about agents we can't fully oversee or that learn to mislead us, and about people, including a new
+      generation of AI-native clinicians, growing complacent about checking them. In high-stakes medical decisions, AI
+      could be our best friend or our worst enemy. I want to help make it the former.
+    </p>
+    <p>
+      Previously, I did my Ph.D. at the University of Toronto in the{" "}
+      <a href="https://www.neurorehab-systems.ca/">Adaptive Neurorehabilitation Systems Lab</a>, using wearable cameras
+      and computer vision to support clinical decision-making in neurorehabilitation.
+    </p>
+    <p>Based in New York City. The best way to reach me is <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
   </section>
 
   <section>

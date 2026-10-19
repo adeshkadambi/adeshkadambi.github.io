@@ -1,11 +1,17 @@
-# One entry per project. Links are all optional: site | repo | paper | post.
+# One entry per project. Links are all optional: site | repo | paper | thesis | post.
+# `papers` lists ids from publications.yaml; titles and links are pulled from there.
 
 - id: egocentric-hand-use
-  name: Egocentric video for neurorehabilitation
-  year: 2020–2025
-  description: My PhD work. A system that uses wearable cameras, computer vision, and deep learning to show clinicians how stroke and spinal cord injury patients use their hands at home.
+  name: Wearable cameras for outpatient neurorehabilitation
+  year: 2020–2026
+  description: My PhD thesis. A clinical decision support system, co-designed with therapists, that uses egocentric video from wearable cameras to show how stroke and spinal cord injury patients use their hands at home, with an algorithm that classifies daily activities so therapists can quickly find relevant footage.
   links:
-    paper: https://doi.org/10.1101/2024.09.27.24314512
+    thesis: https://hdl.handle.net/1807/153802
+  papers: # listed oldest first; shown as Paper 1, 2, 3, ...
+    - kadambi-2023-dashboard
+    - kadambi-2025-adl-tnsre
+    - kadambi-2026-therapist-perspectives
+    - kadambi-2026-translational-framework
 
 - id: ut-thesis-typst
   name: UofT Typst thesis template

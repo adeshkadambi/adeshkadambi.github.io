@@ -1,4 +1,4 @@
-import { defineCollection } from "astro:content"
+import { defineCollection, reference } from "astro:content"
 import { file, glob } from "astro/loaders"
 import { z } from "astro/zod"
 
@@ -39,9 +39,11 @@ const projects = defineCollection({
         site: z.string().optional(),
         repo: z.string().optional(),
         paper: z.string().optional(),
+        thesis: z.string().optional(),
         post: z.string().optional(),
       })
       .default({}),
+    papers: z.array(reference("publications")).default([]),
   }),
 })
 

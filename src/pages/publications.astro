@@ -5,13 +5,42 @@ import { site } from "../data/site"
 
 const sections = [
   { type: "journal", label: "Journal articles" },
-  { type: "conference", label: "Conference papers and abstracts" },
+  { type: "conference", label: "Conference proceedings" },
   { type: "preprint", label: "Preprints" },
   { type: "patent", label: "Patents" },
 ] as const
 
 const pubs = (await getCollection("publications")).sort((a, b) => b.data.year - a.data.year)
 const me = "Kadambi, A."
+const hasEqualContribution = pubs.some((p) => p.data.authors.includes("*"))
+
+// "Surname, I., Other, J. K." -> ["Surname, I.", "Other, J. K."]
+function splitAuthors(authors: string) {
+  const parts = authors.split(", ")
+  const names: string[] = []
+  for (let i = 0; i < parts.length; i += 2) names.push(`${parts[i]}, ${parts[i + 1]}`)
+  return names
+}
+
+// Long lists keep everyone up to and including me, then "…" and the last author
+function shortenAuthors(authors: string, max = 8) {
+  const names = splitAuthors(authors)
+  if (names.length <= max) return authors
+  const keep = Math.max(3, names.findIndex((n) => n.startsWith(me)) + 1)
+  if (keep >= names.length - 1) return authors
+  return `${names.slice(0, keep).join(", ")}, …, ${names.at(-1)}`
+}
+
+// Keep page/date ranges like "1–4" from breaking at the dash
+const noBreakDash = (text: string) => text.replace(/–/g, "\u2060–\u2060")
+
+function linkLabel(url: string) {
+  if (url.includes("doi.org")) return "DOI"
+  if (url.includes("arxiv.org")) return "arXiv"
+  if (url.includes("researchsquare.com")) return "Preprint"
+  if (url.includes("patents.google")) return "Patent"
+  return "Link"
+}
 ---
 
 <Base title="Publications" description="Publications by Adesh Kadambi.">
@@ -22,31 +51,49 @@ const me = "Kadambi, A."
       const items = pubs.filter((p) => p.data.type === type)
       return (
         items.length > 0 && (
-          <section>
-            <h2 class="section-title">{label}</h2>
+          <section class="pub-section">
+            <h2>
+              {label} <span class="count">{items.length}</span>
+            </h2>
             <ol class="pubs">
-              {items.map(({ data }) => {
-                const [before, ...rest] = data.authors.split(me)
+              {items.map(({ id, data }, i) => {
+                const firstOfYear = i === 0 || items[i - 1].data.year !== data.year
+                const authors = shortenAuthors(data.authors)
+                const [before, ...rest] = authors.split(me)
                 return (
-                  <li>
-                    <div class="pub-title">
-                      {data.url ? <a href={data.url}>{data.title}</a> : data.title}
-                    </div>
-                    <div class="pub-authors">
-                      {rest.length ? (
-                        <>
-                          {before}
-                          <strong>{me}</strong>
-                          {rest.join(me)}
-                        </>
-                      ) : (
-                        data.authors
-                      )}
-                    </div>
-                    <div class="pub-venue">
-                      <em>{data.venue}</em>
-                      {data.details && `, ${data.details}`} ({data.year})
-                      {data.note && <span class="tag">{data.note}</span>}
+                  <li id={id} class:list={{ "first-of-year": firstOfYear }}>
+                    <span class="pub-year">{firstOfYear && data.year}</span>
+                    <div>
+                      <div class="pub-title">
+                        {data.url ? <a href={data.url}>{data.title}</a> : data.title}
+                        {data.note && (
+                          <>
+                            {"\u2060"}
+                            <span class="tag">{data.note}</span>
+                          </>
+                        )}
+                      </div>
+                      <div class="pub-authors" title={authors !== data.authors ? data.authors : undefined}>
+                        {rest.length ? (
+                          <>
+                            {before}
+                            <strong>{me}</strong>
+                            {rest.join(me)}
+                          </>
+                        ) : (
+                          authors
+                        )}
+                      </div>
+                      <div class="pub-venue">
+                        <em>{data.venue}</em>
+                        {data.details && `, ${noBreakDash(data.details)}`}
+                        {data.url && (
+                          <>
+                            {" · "}
+                            <a href={data.url}>{linkLabel(data.url)} ↗</a>
+                          </>
+                        )}
+                      </div>
                     </div>
                   </li>
                 )
@@ -57,4 +104,5 @@ const me = "Kadambi, A."
       )
     })
   }
+  {hasEqualContribution && <p class="footnote">* Equal contribution.</p>}
 </Base>

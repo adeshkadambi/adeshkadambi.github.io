@@ -1,7 +1,7 @@
 export const site = {
   name: "Adesh Kadambi",
   description:
-    "Writing, updates, publications, and projects from Adesh Kadambi: machine learning, wearables, and health.",
+    "Adesh Kadambi builds and evaluates AI agents for healthcare at Delfina, with a focus on AI safety and alignment.",
   email: "adeshkadambi@gmail.com",
   links: {
     GitHub: "https://github.com/adeshkadambi",

@@ -1,38 +1,36 @@
 # One entry per publication. `type` is one of: journal | conference | preprint | patent.
-# "Kadambi, A." is bolded automatically. Order within the file doesn't matter;
-# the page sorts by year (newest first) within each type.
+# "Kadambi, A." is bolded automatically. Mark equal contribution with a trailing * on the name.
+# Order within the file doesn't matter; the page sorts by year (newest first) within each type.
 
-- id: kadambi-2025-adl-mllm
-  type: conference
-  year: 2025
-  title: Automating ADL classification from egocentric video using multimodal large language models to support clinical decision-making in neurorehabilitation
-  authors: "Kadambi, A., Zariffa, J."
-  venue: ACRM RehabWeek 2025
-  note: Accepted
-
-- id: kadambi-2024-adl-egocentric
-  type: preprint
-  year: 2024
-  title: Detecting activities of daily living in egocentric video to contextualize hand use at home in outpatient neurorehabilitation settings
-  authors: "Kadambi, A., Zariffa, J."
-  venue: arXiv [cs.CV]
-  url: http://arxiv.org/abs/2412.10846
-
-- id: kadambi-2024-clinical-utility
-  type: preprint
-  year: 2024
-  title: Evaluating the clinical utility of hand performance information from at-home egocentric video in outpatient neurorehabilitation
-  authors: "Kadambi, A., Manzone, D. M., Zariffa, J."
-  venue: medRxiv
-  url: https://doi.org/10.1101/2024.09.27.24314512
+# Patents
 
 - id: kadambi-2024-patent
   type: patent
   year: 2024
   title: Prediction models for early identification of pregnancy disorders
-  authors: "Kadambi, A., Fulcher, I., Ebrahim, A., Ebrahim, S., Finkelstein, N., Schor, J., Wen, T."
-  venue: World Intellectual Property Organization, WO2024102495A1
+  authors: "Kadambi, A.*, Fulcher, I.*, Ebrahim, A.*, Ebrahim, S.*, Finkelstein, N.*, Schor, J.*, Wen, T.*"
+  venue: World Intellectual Property Organization, Patent Application No. WO2024102495A1
   url: https://patents.google.com/patent/WO2024102495A1
+
+# Journal articles
+
+- id: kadambi-2026-therapist-perspectives
+  type: journal
+  year: 2026
+  title: "Therapist perspectives on the clinical utility of hand performance information from at-home egocentric video in outpatient neurorehabilitation: a multi-methods evaluation study"
+  authors: "Kadambi, A., Manzone, D. M., Zariffa, J."
+  venue: BMC Medical Informatics and Decision Making
+  details: 1–12
+  url: https://doi.org/10.1186/s12911-026-03500-6
+
+- id: kadambi-2025-adl-tnsre
+  type: journal
+  year: 2025
+  title: Detecting activities of daily living in egocentric video to contextualize hand use at home in outpatient neurorehabilitation settings
+  authors: "Kadambi, A., Zariffa, J."
+  venue: IEEE Transactions on Neural Systems and Rehabilitation Engineering
+  details: 1–8
+  url: https://doi.org/10.1109/TNSRE.2025.3569083
 
 - id: schor-2024-hdp
   type: journal
@@ -47,7 +45,7 @@
   type: journal
   year: 2023
   title: Designing an egocentric video-based dashboard to report hand performance measures for outpatient rehabilitation of cervical spinal cord injury
-  authors: "Kadambi, A., Bandini, A., Ramkalawan, R. D., Hitzig, S. L., Zariffa, J."
+  authors: "Kadambi, A.*, Bandini, A.*, Ramkalawan, R. D., Hitzig, S. L., Zariffa, J."
   venue: Topics in Spinal Cord Injury Rehabilitation
   details: 29(suppl), 75–87
   url: https://doi.org/10.46292/sci23-00015S
@@ -92,7 +90,7 @@
   type: journal
   year: 2020
   title: Accurate detection of spontaneous seizures using a generalized linear model with external validation
-  authors: "Fumeaux, N. F., Ebrahim, S., Coughlin, B. F., Kadambi, A., Azmi, A., Xu, J. X., Abou Jaoude, M., Nagaraj, S. B., Thomson, K. E., Newell, T. G., Metcalf, C. S., Wilcox, K. S., Kimchi, E. Y., Moraes, M. F. D., Cash, S. S."
+  authors: "Fumeaux, N. F.*, Ebrahim, S.*, Coughlin, B. F., Kadambi, A., Azmi, A., Xu, J. X., Abou Jaoude, M., Nagaraj, S. B., Thomson, K. E., Newell, T. G., Metcalf, C. S., Wilcox, K. S., Kimchi, E. Y., Moraes, M. F. D., Cash, S. S."
   venue: Epilepsia
   url: https://doi.org/10.1111/epi.16628
 
@@ -105,6 +103,43 @@
   details: 2(9), 2694–2703
   url: https://doi.org/10.1364/OSAC.2.002694
 
+# Preprints
+
+- id: kadambi-2026-translational-framework
+  type: preprint
+  year: 2026
+  title: A translational framework mapping clinical challenges to technology solutions in upper limb neurorehabilitation
+  authors: "Kadambi, A., Eftekhar, P., Wang, R. H., Zariffa, J."
+  venue: Research Square
+  url: https://www.researchsquare.com/article/rs-7852937/latest
+
+# Conference proceedings
+
+- id: kadambi-2027-asia
+  type: conference
+  year: 2027
+  title: Translational framework mapping clinical challenges to technology solutions in upper limb neurorehabilitation
+  authors: "Kadambi, A., Eftekhar, P., Wang, R. H., Zariffa, J."
+  venue: American Spinal Injury Association (ASIA) Scientific Meeting
+  details: Charlotte, USA, March 5–7 2027
+  note: Accepted
+
+- id: kadambi-2025-rehabweek
+  type: conference
+  year: 2025
+  title: Automating ADL classification from egocentric video using multimodal large language models to support clinical decision-making in neurorehabilitation
+  authors: "Kadambi, A., Zariffa, J."
+  venue: RehabWeek
+  details: Chicago, USA, May 12–15 2025
+
+- id: kadambi-2025-icair
+  type: conference
+  year: 2025
+  title: Using multimodal LLMs to classify activities from egocentric home video for neurorehabilitation assessment
+  authors: "Kadambi, A., Zariffa, J."
+  venue: International Conference on Aging, Innovation and Rehabilitation
+  details: Toronto, Canada, May 1–2 2025
+
 - id: kadambi-2023-bhi
   type: conference
   year: 2023
@@ -113,6 +148,14 @@
   venue: 2023 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)
   details: 1–4
   url: https://doi.org/10.1109/BHI58575.2023.10313375
+
+- id: kadambi-2023-icair-dashboard
+  type: conference
+  year: 2023
+  title: User-centered design of a dashboard to report measures of hand performance during outpatient rehabilitation in people with cervical spinal cord injury
+  authors: "Kadambi, A., Bandini, A., Ramkalawan, R. D., Hitzig, S. L., Zariffa, J."
+  venue: International Conference on Aging, Innovation and Rehabilitation
+  details: Toronto, Canada, May 8 2023
 
 - id: kadambi-2023-gdm-abstract
   type: conference
