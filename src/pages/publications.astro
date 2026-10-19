@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content"
+import Base from "../layouts/Base.astro"
+import { site } from "../data/site"
+
+const sections = [
+  { type: "journal", label: "Journal articles" },
+  { type: "conference", label: "Conference papers and abstracts" },
+  { type: "preprint", label: "Preprints" },
+  { type: "patent", label: "Patents" },
+] as const
+
+const pubs = (await getCollection("publications")).sort((a, b) => b.data.year - a.data.year)
+const me = "Kadambi, A."
+---
+
+<Base title="Publications" description="Publications by Adesh Kadambi.">
+  <h1>Publications</h1>
+  <p class="lede">Also on <a href={site.links["Google Scholar"]}>Google Scholar</a>.</p>
+  {
+    sections.map(({ type, label }) => {
+      const items = pubs.filter((p) => p.data.type === type)
+      return (
+        items.length > 0 && (
+          <section>
+            <h2 class="section-title">{label}</h2>
+            <ol class="pubs">
+              {items.map(({ data }) => {
+                const [before, ...rest] = data.authors.split(me)
+                return (
+                  <li>
+                    <div class="pub-title">
+                      {data.url ? <a href={data.url}>{data.title}</a> : data.title}
+                    </div>
+                    <div class="pub-authors">
+                      {rest.length ? (
+                        <>
+                          {before}
+                          <strong>{me}</strong>
+                          {rest.join(me)}
+                        </>
+                      ) : (
+                        data.authors
+                      )}
+                    </div>
+                    <div class="pub-venue">
+                      <em>{data.venue}</em>
+                      {data.details && `, ${data.details}`} ({data.year})
+                      {data.note && <span class="tag">{data.note}</span>}
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </section>
+        )
+      )
+    })
+  }
+</Base>

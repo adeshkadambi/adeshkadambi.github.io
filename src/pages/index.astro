@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro"
+import FeedItem from "../components/FeedItem.astro"
+import { site } from "../data/site"
+import { getPosts } from "../lib/posts"
+
+const posts = (await getPosts()).slice(0, 10)
+---
+
+<Base>
+  <section class="intro prose">
+    <h1>Hi, I'm Adesh.</h1>
+    <p>
+      I build machine learning and data tools for healthcare. I'm a Ph.D. candidate at the University of Toronto in the{" "}
+      <a href="https://www.neurorehab-systems.ca/">Adaptive Neurorehabilitation Systems Lab</a>, where I use AI and
+      wearable cameras to support clinical decision-making in outpatient neurorehabilitation. I'm also a data scientist
+      at <a href="https://www.delfina.com/">Delfina Care</a>, where I work on improving outcomes for mothers and babies.
+    </p>
+    <p>Toronto, Canada. The best way to reach me is <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Recent</h2>
+    {posts.map((post) => <FeedItem post={post} />)}
+    <p class="more"><a href="/posts/">All writing and updates →</a></p>
+  </section>
+</Base>

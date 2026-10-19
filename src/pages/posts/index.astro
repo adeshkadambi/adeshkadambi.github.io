@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro"
+import FeedItem from "../../components/FeedItem.astro"
+import { getPosts } from "../../lib/posts"
+
+const posts = await getPosts()
+const byYear = Map.groupBy(posts, (post) => post.data.date.getUTCFullYear())
+---
+
+<Base title="Writing" description="Posts, notes, and updates.">
+  <h1>Writing</h1>
+  <p class="lede">Posts, notes, and updates. Subscribe via <a href="/rss.xml">RSS</a>.</p>
+  {
+    [...byYear].map(([year, items]) => (
+      <section>
+        <h2 class="section-title">{year}</h2>
+        {items.map((post) => <FeedItem post={post} />)}
+      </section>
+    ))
+  }
+</Base>

@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content"
+import Base from "../layouts/Base.astro"
+
+// Most recent first, by the last year mentioned (e.g. "2020–2025" sorts as 2025)
+const lastYear = (year?: string) => Math.max(0, ...(year?.match(/\d{4}/g) ?? []).map(Number))
+const projects = (await getCollection("projects")).sort((a, b) => lastYear(b.data.year) - lastYear(a.data.year))
+const linkLabels = { site: "Website", repo: "Code", paper: "Paper", post: "Write-up" } as const
+---
+
+<Base title="Projects" description="Things Adesh Kadambi has built.">
+  <h1>Projects</h1>
+  <ul class="projects">
+    {
+      projects.map(({ data }) => (
+        <li>
+          <div class="project-head">
+            <span class="project-name">{data.name}</span>
+            {data.year && <span class="meta">{data.year}</span>}
+          </div>
+          <p>{data.description}</p>
+          <div class="project-links">
+            {(Object.keys(linkLabels) as (keyof typeof linkLabels)[]).map(
+              (key) => data.links[key] && <a href={data.links[key]}>{linkLabels[key]}</a>,
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

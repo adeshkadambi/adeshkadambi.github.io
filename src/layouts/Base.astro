@@ -1,0 +1,59 @@
+---
+import "../styles/global.css"
+import { site } from "../data/site"
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const { title, description = site.description } = Astro.props
+const pageTitle = title ? `${title} | ${site.name}` : site.name
+const path = Astro.url.pathname
+const nav = [
+  { href: "/posts/", label: "Writing" },
+  { href: "/publications/", label: "Publications" },
+  { href: "/projects/", label: "Projects" },
+]
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(path, Astro.site)} />
+    <script is:inline defer data-domain="adeshkadambi.github.io" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href="/">{site.name}</a>
+      <nav>
+        {
+          nav.map(({ href, label }) => (
+            <a href={href} aria-current={path.startsWith(href) ? "page" : undefined}>
+              {label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <a href={`mailto:${site.email}`}>Email</a>
+      {Object.entries(site.links).map(([label, href]) => <a href={href}>{label}</a>)}
+      <a href="/rss.xml">RSS</a>
+    </footer>
+  </body>
+</html>

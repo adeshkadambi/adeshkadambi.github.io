@@ -1,0 +1,33 @@
+---
+import { render, type CollectionEntry } from "astro:content"
+import { formatDate } from "../lib/posts"
+
+interface Props {
+  post: CollectionEntry<"posts">
+}
+
+const { post } = Astro.props
+const href = `/posts/${post.id}/`
+const isUpdate = post.data.kind === "update"
+const { Content } = isUpdate ? await render(post) : { Content: null }
+---
+
+<article class:list={["feed-item", { update: isUpdate }]}>
+  <div class="meta">
+    <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+    {isUpdate && <span class="tag">Update</span>}
+  </div>
+  {
+    isUpdate && Content ? (
+      <div class="prose">
+        <a class="update-title" href={href}>{post.data.title}</a>
+        <Content />
+      </div>
+    ) : (
+      <div>
+        <a class="title" href={href}>{post.data.title}</a>
+        {post.data.description && <p class="description">{post.data.description}</p>}
+      </div>
+    )
+  }
+</article>

@@ -1,0 +1,151 @@
+# One entry per publication. `type` is one of: journal | conference | preprint | patent.
+# "Kadambi, A." is bolded automatically. Order within the file doesn't matter;
+# the page sorts by year (newest first) within each type.
+
+- id: kadambi-2025-adl-mllm
+  type: conference
+  year: 2025
+  title: Automating ADL classification from egocentric video using multimodal large language models to support clinical decision-making in neurorehabilitation
+  authors: "Kadambi, A., Zariffa, J."
+  venue: ACRM RehabWeek 2025
+  note: Accepted
+
+- id: kadambi-2024-adl-egocentric
+  type: preprint
+  year: 2024
+  title: Detecting activities of daily living in egocentric video to contextualize hand use at home in outpatient neurorehabilitation settings
+  authors: "Kadambi, A., Zariffa, J."
+  venue: arXiv [cs.CV]
+  url: http://arxiv.org/abs/2412.10846
+
+- id: kadambi-2024-clinical-utility
+  type: preprint
+  year: 2024
+  title: Evaluating the clinical utility of hand performance information from at-home egocentric video in outpatient neurorehabilitation
+  authors: "Kadambi, A., Manzone, D. M., Zariffa, J."
+  venue: medRxiv
+  url: https://doi.org/10.1101/2024.09.27.24314512
+
+- id: kadambi-2024-patent
+  type: patent
+  year: 2024
+  title: Prediction models for early identification of pregnancy disorders
+  authors: "Kadambi, A., Fulcher, I., Ebrahim, A., Ebrahim, S., Finkelstein, N., Schor, J., Wen, T."
+  venue: World Intellectual Property Organization, WO2024102495A1
+  url: https://patents.google.com/patent/WO2024102495A1
+
+- id: schor-2024-hdp
+  type: journal
+  year: 2024
+  title: Using machine learning to predict the risk of developing hypertensive disorders of pregnancy using a contemporary nulliparous cohort
+  authors: "Schor, J. S., Kadambi, A., Fulcher, I., Venkatesh, K. K., Clapp, M. A., Ebrahim, S., Ebrahim, A., Wen, T."
+  venue: AJOG Global Reports
+  details: 4(4), 100386
+  url: https://doi.org/10.1016/j.xagr.2024.100386
+
+- id: kadambi-2023-dashboard
+  type: journal
+  year: 2023
+  title: Designing an egocentric video-based dashboard to report hand performance measures for outpatient rehabilitation of cervical spinal cord injury
+  authors: "Kadambi, A., Bandini, A., Ramkalawan, R. D., Hitzig, S. L., Zariffa, J."
+  venue: Topics in Spinal Cord Injury Rehabilitation
+  details: 29(suppl), 75–87
+  url: https://doi.org/10.46292/sci23-00015S
+
+- id: kadambi-2023-gdm
+  type: journal
+  year: 2023
+  title: "Predicting the risk of gestational diabetes using clinical data with statistical and machine learning: a predictive model study"
+  authors: "Kadambi, A., Fulcher, I., Venkatesh, K., Schor, J. S., Clapp, M. A., Wen, T."
+  venue: American Journal of Obstetrics & Gynecology MFM
+  details: "100965"
+  url: https://doi.org/10.1016/j.ajogmf.2023.100965
+
+- id: brotherton-2022-ehr
+  type: journal
+  year: 2022
+  title: Development of an offline, open-source, electronic health record system for refugee care
+  authors: "Brotherton, T., Brotherton, S., Ashworth, H., Kadambi, A., Ebrahim, H., Ebrahim, S."
+  venue: Frontiers in Digital Health
+  details: 4, 847002
+  url: https://doi.org/10.3389/fdgth.2022.847002
+
+- id: naar-2022-icu
+  type: journal
+  year: 2022
+  title: "Hospital academic status and the volume-outcome association in postoperative patients requiring intensive care: results of a nationwide analysis of intensive care units in the United States"
+  authors: "Naar, L., Maurer, L. R., Dorken Gallastegi, A., El Hechi, M. W., Rao, S. R., Coughlin, C., Ebrahim, S., Kadambi, A., Mendoza, A. E., Saillant, N. N., Renne, B. C. B., Velmahos, G. C., Kaafarani, H. M. A., Lee, J."
+  venue: Journal of Intensive Care Medicine
+  details: "8850666221094506"
+  url: https://doi.org/10.1177/08850666221094506
+
+- id: ebrahim-2020-covid
+  type: journal
+  year: 2020
+  title: "Reduction of COVID-19 incidence and nonpharmacologic interventions: analysis using a US county-level policy data set"
+  authors: "Ebrahim, S., Ashworth, H., Noah, C., Kadambi, A., Toumi, A., Chhatwal, J."
+  venue: Journal of Medical Internet Research
+  details: 22(12), e24614
+  url: https://doi.org/10.2196/24614
+
+- id: fumeaux-2020-seizure
+  type: journal
+  year: 2020
+  title: Accurate detection of spontaneous seizures using a generalized linear model with external validation
+  authors: "Fumeaux, N. F., Ebrahim, S., Coughlin, B. F., Kadambi, A., Azmi, A., Xu, J. X., Abou Jaoude, M., Nagaraj, S. B., Thomson, K. E., Newell, T. G., Metcalf, C. S., Wilcox, K. S., Kimchi, E. Y., Moraes, M. F. D., Cash, S. S."
+  venue: Epilepsia
+  url: https://doi.org/10.1111/epi.16628
+
+- id: prasad-2019-optofluidic
+  type: journal
+  year: 2019
+  title: Mechanically-tuned optofluidic lenses for in-plane focusing of light
+  authors: "Prasad, S., Kadambi, A., Alwehaibi, Y., Collier, C. M."
+  venue: OSA Continuum
+  details: 2(9), 2694–2703
+  url: https://doi.org/10.1364/OSAC.2.002694
+
+- id: kadambi-2023-bhi
+  type: conference
+  year: 2023
+  title: Providing hand use context for outpatient neurorehabilitation with egocentric object detection
+  authors: "Kadambi, A., Zariffa, J."
+  venue: 2023 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)
+  details: 1–4
+  url: https://doi.org/10.1109/BHI58575.2023.10313375
+
+- id: kadambi-2023-gdm-abstract
+  type: conference
+  year: 2023
+  title: Using machine learning to predict the risk of developing gestational diabetes using a contemporary cohort
+  authors: "Kadambi, A., Fulcher, I., Schor, J., Ebrahim, A., Ebrahim, S., Wen, T."
+  venue: American Journal of Obstetrics and Gynecology
+  details: 228(1), S752–S753
+  url: https://doi.org/10.1016/j.ajog.2022.11.1254
+
+- id: kadambi-2022-hdp-rf
+  type: conference
+  year: 2022
+  title: Random forests for accurate prediction of the risk of hypertensive disorders of pregnancy at term [A208]
+  authors: "Kadambi, A., Wen, T., Nguyen, E., Dolisca, S., Ebrahim, S., Ebrahim, A."
+  venue: Obstetrics & Gynecology
+  details: 139, 60S
+  url: https://doi.org/10.1097/01.AOG.0000826108.67780.d7
+
+- id: buford-2022-cesarean
+  type: conference
+  year: 2022
+  title: Cesarean delivery rates among hypertensive birth hospitalizations in urban versus rural hospitals
+  authors: "Buford, A., Kadambi, A., Ebrahim, A., Ebrahim, S., Nguyen, E., Wen, T."
+  venue: American Journal of Obstetrics and Gynecology
+  details: 226(1), S590–S591
+  url: https://doi.org/10.1016/j.ajog.2021.11.975
+
+- id: bandini-2021-web-interface
+  type: conference
+  year: 2021
+  title: A web-based interface for monitoring hand use in people with cervical spinal cord injury living in the community
+  authors: "Bandini, A., Kadambi, A., Ramkalawan, R. D., Hitzig, S. L., Zariffa, J."
+  venue: The Journal of Spinal Cord Medicine
+  details: 44(SUPPL1), S320
+  url: https://doi.org/10.1080/10790268.2021.1957653

@@ -1,0 +1,30 @@
+# One entry per project. Links are all optional: site | repo | paper | post.
+
+- id: egocentric-hand-use
+  name: Egocentric video for neurorehabilitation
+  year: 2020–2025
+  description: My PhD work. A system that uses wearable cameras, computer vision, and deep learning to show clinicians how stroke and spinal cord injury patients use their hands at home.
+  links:
+    paper: https://doi.org/10.1101/2024.09.27.24314512
+
+- id: ut-thesis-typst
+  name: UofT Typst thesis template
+  year: 2024
+  description: A University of Toronto SGS-compliant thesis template written in Typst.
+  links:
+    repo: https://github.com/adeshkadambi/ut-thesis-typst/
+    post: /posts/2024-10-20-typst-thesis-template/
+
+- id: maya-health
+  name: Maya Health
+  year: 2023–2024
+  description: A startup that tried to automate medical coding for mid-size US clinics with LLMs. We pivoted away and wrote up what we learned.
+  links:
+    post: /posts/2024-03-12-maya-post-mortem/
+
+- id: refugee-ehr
+  name: Offline EHR for refugee care
+  year: 2022
+  description: An offline-first, open-source electronic health record system deployed in 5+ countries and serving 100K+ patients. I led UX research and design.
+  links:
+    paper: https://doi.org/10.3389/fdgth.2022.847002
